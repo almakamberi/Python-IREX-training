@@ -1,0 +1,121 @@
+Requirements: 
+
+Create an OOP-oriented Python program for BMI calculation based on user input. 
+
+Prompt the user for their name, age, weight in kilograms, and height in meters. 
+
+Implement separate classes for Adult and Child inheriting from an abstract base class Person. 
+
+Abstract base class Person should have methods: 
+
+calculate_bmi(): Abstract method to calculate BMI based on specific formulas for adults and children. 
+
+get_bmi_category(): Abstract method to categorize BMI into Underweight, Normal weight, Overweight, and Obese based on age-specific thresholds. 
+
+print_info(): Prints the information of the person, including BMI and Category.  
+
+Use the @property decorator to encapsulate weight and height attributes in the Person class to ensure controlled access and modification. 
+
+For Adult class: 
+
+BMI calculated using standard formula: 
+BMI = weight(kg)[height(m)]2
+B
+M
+I
+ 
+=
+ 
+w
+e
+i
+g
+h
+t
+k
+g
+h
+e
+i
+g
+h
+t
+m
+2
+ 
+ 
+
+Categories: 
+
+Underweight: BMI < 18.5 
+
+Normal weight: 18.5 <= BMI < 24.9 
+
+Overweight: 24.9 <= BMI < 29.9 
+
+Obese: BMI >= 29.9 
+
+For Child class: 
+
+BMI calculated with adjustment factor: 
+Adjusted BMI = weight(kg)[height(kg)]2⋅1.3
+A
+d
+j
+u
+s
+t
+e
+d
+ 
+B
+M
+I
+ 
+=
+ 
+w
+e
+i
+g
+h
+t
+k
+g
+h
+e
+i
+g
+h
+t
+k
+g
+2
+⋅
+1
+.
+3
+ 
+ 
+
+Categories: 
+
+Underweight: BMI < 14 
+
+Normal weight: 14 <= BMI < 18 
+
+Overweight: 18 <= BMI < 24 
+
+Obese: BMI >= 24 
+
+Create a BMIApp class that has the following functions: 
+
+add_person(person): Adds a Person object to the self.people list, which is initialized in the BMIApp class to store instances of Person (both Adult and Child). 
+
+collect_user_data(): Prompts the user for their information and creates Person instances based on their age. 
+
+print_results(): Prints BMI and category for each person in the list. 
+
+run(): Main method to execute the application flow, collects user data repeatedly until the user chooses to terminate the program. After collecting data, it prints the BMI results for all collected persons. 
+
+There is no need for a graphical User Interface (UI), but students can use ‘tkinter’ to add a basic UI if they complete the core logic early. 
